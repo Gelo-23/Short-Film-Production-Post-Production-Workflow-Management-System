@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Short Film Production Workflow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="toast-container"></div>
+
+  <section id="auth-screen" class="auth-screen">
+    <div class="auth-card">
+      <div class="brand-block">
+        <span class="brand-mark">SF</span>
+        <div>
+          <h1>Short Film Workflow</h1>
+          <p>Production & Post-Production Management System</p>
+        </div>
+      </div>
+
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-auth-tab="login">Log In</button>
+        <button class="auth-tab" data-auth-tab="signup">Sign Up</button>
+      </div>
+
+      <form id="login-form" class="auth-form">
+        <label>Email
+          <input id="login-email" type="email" placeholder="admin@film.local" required>
+        </label>
+        <label>Password
+          <input id="login-password" type="password" placeholder="admin123" required>
+        </label>
+        <button class="primary-btn full" type="submit">Log In</button>
+        <p class="demo-hint">Demo: admin@film.local / admin123</p>
+      </form>
+
+      <form id="signup-form" class="auth-form hidden">
+        <label>Full Name
+          <input id="signup-name" type="text" placeholder="Your name" minlength="2" required>
+        </label>
+        <label>Email
+          <input id="signup-email" type="email" placeholder="you@example.com" required>
+        </label>
+        <label>Password
+          <input id="signup-password" type="password" placeholder="At least 6 characters" minlength="6" required>
+        </label>
+        <label>Role
+          <select id="signup-role" required>
+            <option value="">Choose a role</option>
+            <option>Admin</option>
+            <option>Project Manager</option>
+            <option>Editor</option>
+            <option>Animator</option>
+            <option>Reviewer</option>
+            <option>Client</option>
+            <option>Viewer</option>
+          </select>
+        </label>
+        <button class="primary-btn full" type="submit">Create Account</button>
+      </form>
+    </div>
+  </section>
+
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <span class="brand-mark">SF</span>
+        <div>
+          <strong>Short Film</strong>
+          <small>Workflow System</small>
+        </div>
+      </div>
+
+      <nav id="nav">
+        <button class="nav-item active" data-view="dashboard">Dashboard</button>
+        <button class="nav-item" data-view="projects">Projects</button>
+        <button class="nav-item" data-view="assets">Assets & Files</button>
+        <button class="nav-item" data-view="tasks">Production Tasks</button>
+        <button class="nav-item" data-view="reviews">Review & Approval</button>
+        <button class="nav-item" data-view="comments">Comments</button>
+        <button class="nav-item" data-view="notifications">Notifications</button>
+        <button class="nav-item" data-view="audit">Audit Log</button>
+        <button class="nav-item" data-view="integration">Integration</button>
+        <button class="nav-item" data-view="architecture">Architecture</button>
+        <button class="nav-item" data-view="security">Security & Testing</button>
+        <button class="nav-item" data-view="backup">Backup & Deployment</button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div id="user-mini" class="user-mini"></div>
+        <button id="logout-btn" class="logout-btn">Log Out</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <span class="eyebrow">SYSTEMS INTEGRATION PROJECT #4</span>
+          <h2 id="page-title">Dashboard</h2>
+        </div>
+        <div class="topbar-right">
+          <span id="role-badge" class="role-badge"></span>
+          <button id="quick-notify" class="icon-btn" title="Open notifications">Notifications</button>
+        </div>
+      </header>
+
+      <div id="view-container"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
