@@ -29,7 +29,7 @@ const defaultData = {
     { id: "n2", text: "Dialogue Mix v3 needs revision.", read: false, date: "2026-10-08" }
   ],
   audit: [
-    { id: "l1", action: "System initialized", actor: "System Admin", target: "Workflow System", time: "2026-10-01 09:00" },
+    { id: "l1", action: "System initialized", actor: "System Admin", target: "FilmFlow", time: "2026-10-01 09:00" },
     { id: "l2", action: "Asset submitted", actor: "Noah Cruz", target: "Footage Scene 03 v1", time: "2026-10-08 14:25" },
     { id: "l3", action: "Revision requested", actor: "Noah Cruz", target: "Dialogue Mix v3", time: "2026-10-08 16:10" }
   ],
